@@ -1,0 +1,38 @@
+## Programmieren Sie nun Ihre erste Schleife in Python:
+##  i in range(10):
+## print(i)
+## Was passiert, wenn Sie mehrere Befehle innerhalb der Schleife ausführen wollen?
+## Woher „weiß“ Python, wo die Schleife zu Ende ist? Vergleichen Sie mit anderen
+## Programmiersprachen, die Sie kennen. Ändern Sie nun Start- und Endwert der
+## Schleife; geben Sie beispielsweise die Zahlen von -10 bis +10 (einschließlich aus).
+## Wie müssen Sie die Parameter der „range“-Funktion wählen?
+
+## a)
+
+for i in range(10):
+    print(i)
+
+# Beispiel Dart: 
+# for ( i = 0; i <= 10; i ++ 1):
+#    print(i)
+
+# Unterschied: Python legt den Startwert der Schleife per Default auf 0, auch die Schrittweite ist standardmäßig 1. 
+# In anderen Sprachen muüssen diese Elemente in der Syntax angegeben werden
+# Python startet die Schleife mit dem Index [0] = 0, was dazu führt, dass für die gegebene Funktion insgesamt 10 Werte mit Index [0:9]
+# generiert werden. Dies erklärt auch weshalb für range(10) die 10 nicht inkludiert ist.
+
+
+
+## b)
+
+for i in range(-10, 10, 1):
+    print(i)
+
+# um 10 zu inkludieren: 
+
+for i in range(-10, 11, 1):
+    print(i)
+
+
+
+
