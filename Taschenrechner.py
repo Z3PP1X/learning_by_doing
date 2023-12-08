@@ -8,10 +8,10 @@ print(a)
 
 def zinsrechner(anfangskapital: float, jahre: int, zinssatz:float):
 
-    endkapital = anfangskapital * jahre ** ((1 + zinssatz)/100)
+    endkapital = anfangskapital * (1 + (zinssatz)/100) ** jahre
     return print(f'Ihr Endkapital beträgt nach {jahre} Jahren mit einem Zinssatz von {zinssatz}: {endkapital}€')
 
-zinsrechner(10000, 3, 3.5)
+zinsrechner(1000, 10, 2.5)
 
 ## 3. Verwenden Sie die Funktion type(…), um herauszufinden, welchen Datentype Ihre Variable Jahre und Zinssatz haben.
 
