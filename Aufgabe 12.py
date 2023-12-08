@@ -1,31 +1,30 @@
 def berechne_note(punktzahl, max_punktzahl):
     
     if punktzahl < 0 or punktzahl > max_punktzahl:
-        return -1
-    
+        return -1   
     
     if punktzahl < 0.5 * max_punktzahl:
         return 5.0 
     
-    note_schritte = (max_punktzahl - max_punktzahl * 0.5) // 9  
+    note_schritte = (max_punktzahl * 0.5) / 9
+    punktabstand = punktzahl - (max_punktzahl * 0.5)
+    notenstufen = punktabstand / note_schritte
 
-    note = 4.0 - note_schritte * 0.3
+    note = 4.0 - notenstufen * 0.3
 
-    note = max(1.0, note)
+    if note <= 1.0:
+        note = 1.0
+
+    notenstufen_1 = [1.0, 1.3, 1.7, 2.0, 2.3, 2.7, 3.0, 3.3, 3.7, 4.0]
+
+    note = min(notenstufen_1, key=lambda x:abs(x-note))
+
+    return note
+
+
     
-    rest = note % 1
-    if rest > 0:
-        if rest <= 0.3:
-            note = int(note) + 0.3
-        elif rest <= 0.7:
-            note = int(note) + 0.7
-        else:
-            note = int(note) + 1.0 
-
-    print(note_schritte)    
-
-    print(round(note, 1))
 
 
-berechne_note(150, 200)
+test = berechne_note(150, 150)
+print(test)
 
