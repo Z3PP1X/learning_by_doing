@@ -67,12 +67,12 @@ names = ['Peter', 'Miguel', 'Denis']
 explainer = ListMethodExplainer(names)
 
 explainer.explain_pop()
-explainer.explain_pop_i(1)  # Assuming the index 1 is valid for your list
+explainer.explain_pop_i(1)  
 explainer.explain_append('Thomas')
 explainer.explain_extend(['Calvin', 'Sophia'])
-explainer.explain_remove('Miguel')  # Assuming the name 'Miguel' is in the original list
-explainer.explain_index('Peter')     # Assuming the name 'Peter' is in the original list
-explainer.explain_insert(1, 'Julia') # Insert 'Julia' at index 1
+explainer.explain_remove('Miguel')  
+explainer.explain_index('Peter')     
+explainer.explain_insert(1, 'Julia') 
 explainer.explain_sort()
 
 
